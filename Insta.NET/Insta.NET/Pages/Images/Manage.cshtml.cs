@@ -28,5 +28,21 @@ namespace InstaDOTNET.Pages.Images
         {
             Image = await _image.FindImageAsync(ID.GetValueOrDefault()) ?? new Image();
         }
+
+        public async Task<IActionResult> OnPost()
+        {
+            // make call to db w/ ID
+
+
+            // set the data from the db to the new data from Image/user input
+
+
+            // save the image in the db
+        }
+
+        public async Task<IActionResult> OnPostDelete()
+        {
+
+        }
     }
 }
