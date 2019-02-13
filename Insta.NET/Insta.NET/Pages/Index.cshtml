@@ -1,0 +1,24 @@
+﻿@page
+@using InstaDOTNET.Models.Interfaces
+@inject IImage ImageManager
+
+@{
+    var images = await ImageManager.GetImagesAsync();
+}
+<h1>Insta.NET</h1>
+@foreach (var image in images)
+{
+    <div>
+        <h2>@image.Name</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Photo by: </td>
+                    <td>@image.Author</td>
+                </tr>
+            </tbody>
+        </table>
+        <img src="@image.URL" />
+        <p>"@image.Caption"</p>
+    </div>
+}
