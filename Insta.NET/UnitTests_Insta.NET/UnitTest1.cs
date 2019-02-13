@@ -57,5 +57,22 @@ namespace UnitTests_Insta.NET
             testImage.Caption = "Test Caption One";
             Assert.Equal("Test Caption One", testImage.Caption);
         }
+
+        [Fact]
+        public void CanGetImageURL()
+        {
+            Image testImage = new Image();
+            testImage.URL = "www.test.com";
+            Assert.Equal("www.test.com", testImage.URL);
+        }
+
+        [Fact]
+        public void CanSetImageURL()
+        {
+            Image testImage = new Image();
+            testImage.URL = "www.test.com";
+            testImage.URL = "www.test.net";
+            Assert.Equal("www.test.net", testImage.URL);
+        }
     }
 }
