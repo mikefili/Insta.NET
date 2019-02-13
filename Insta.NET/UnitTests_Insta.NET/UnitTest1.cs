@@ -1,5 +1,5 @@
 using System;
-using Xunit; t
+using Xunit;
 using InstaDOTNET;
 using InstaDOTNET.Models;
 
@@ -22,6 +22,23 @@ namespace UnitTests_Insta.NET
             testImage.Name = "Test Image";
             testImage.Name = "Test Image One";
             Assert.Equal("Test Image One", testImage.Name);
+        }
+
+        [Fact]
+        public void CanGetImageAuthor()
+        {
+            Image testImage = new Image();
+            testImage.Author = "Test Author";
+            Assert.Equal("Test Author", testImage.Author);
+        }
+
+        [Fact]
+        public void CanSetImageAuthor()
+        {
+            Image testImage = new Image();
+            testImage.Author = "Test Author";
+            testImage.Author = "Test Author One";
+            Assert.Equal("Test Author One", testImage.Author);
         }
     }
 }
