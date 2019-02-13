@@ -47,7 +47,8 @@ namespace InstaDOTNET.Pages.Images
 
         public async Task<IActionResult> OnPostDelete()
         {
-
+            await _image.DeleteAsync(ID.Value);
+            return RedirectToPage("/Index");
         }
     }
 }
