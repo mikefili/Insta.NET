@@ -23,7 +23,7 @@ namespace InstaDOTNET.Data
                     Name = "Image One",
                     Author = "Mike F.",
                     Caption = "This is the first test image",
-                    URL = "image_one.png"
+                    URL = "https://via.placeholder.com/200"
                 },
                 new Image
                 {
@@ -31,7 +31,7 @@ namespace InstaDOTNET.Data
                     Name = "Image Two",
                     Author = "Mike F.",
                     Caption = "This is the second test image",
-                    URL = "image_two.png"
+                    URL = "https://via.placeholder.com/200"
                 },
                 new Image
                 {
@@ -39,7 +39,7 @@ namespace InstaDOTNET.Data
                     Name = "Image Three",
                     Author = "Mike F.",
                     Caption = "This is the third test image",
-                    URL = "image_three.png"
+                    URL = "https://via.placeholder.com/200"
                 },
                 new Image
                 {
@@ -47,7 +47,7 @@ namespace InstaDOTNET.Data
                     Name = "Image Four",
                     Author = "Mike F.",
                     Caption = "This is the fourth test image",
-                    URL = "image_four.png"
+                    URL = "https://via.placeholder.com/200"
                 },
                 new Image
                 {
@@ -55,7 +55,7 @@ namespace InstaDOTNET.Data
                     Name = "Image Five",
                     Author = "Mike F.",
                     Caption = "This is the fifth test image",
-                    URL = "image_five.png"
+                    URL = "https://via.placeholder.com/200"
                 }
                 );
         }
