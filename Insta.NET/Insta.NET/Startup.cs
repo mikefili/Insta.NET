@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using InstaDOTNET.Data;
+using InstaDOTNET.Models.Interfaces;
+using InstaDOTNET.Models.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -28,6 +30,7 @@ namespace InstaDOTNET
             services.AddMvc();
             services.AddDbContext<InstaDOTNETDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddScoped<IImage, ImageManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
