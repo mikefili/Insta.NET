@@ -1,7 +1,6 @@
 ﻿@page
 @using InstaDOTNET.Models.Interfaces
 @inject IImage ImageManager
-
 @{
     var images = await ImageManager.GetImagesAsync();
 }
@@ -20,5 +19,6 @@
         </table>
         <img src="@image.URL" />
         <p>"@image.Caption"</p>
+        <a asp-page="/Images/Index" asp-route-id="@image.ID">@image.Name</a>
     </div>
 }

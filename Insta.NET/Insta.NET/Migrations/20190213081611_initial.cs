@@ -22,6 +22,18 @@ namespace InstaDOTNET.Migrations
                 {
                     table.PrimaryKey("PK_Images", x => x.ID);
                 });
+
+            migrationBuilder.InsertData(
+                table: "Images",
+                columns: new[] { "ID", "Author", "Caption", "Name", "URL" },
+                values: new object[,]
+                {
+                    { 1, "Mike F.", "This is the first test image", "Image One", "https://via.placeholder.com/200" },
+                    { 2, "Mike F.", "This is the second test image", "Image Two", "https://via.placeholder.com/200" },
+                    { 3, "Mike F.", "This is the third test image", "Image Three", "https://via.placeholder.com/200" },
+                    { 4, "Mike F.", "This is the fourth test image", "Image Four", "https://via.placeholder.com/200" },
+                    { 5, "Mike F.", "This is the fifth test image", "Image Five", "https://via.placeholder.com/200" }
+                });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
