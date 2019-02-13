@@ -38,9 +38,18 @@ namespace InstaDOTNET.Models.Services
             return await _context.Images.ToListAsync();
         }
 
-        public Task SaveAsync(Image image)
+        public async Task SaveAsync(Image image)
         {
-            throw new NotImplementedException();
+            Image img = await _context.Images.FirstOrDefaultAsync(m => m.ID == image.ID);
+            if (await _context.Images.FirstOrDefaultAsync(m => m.ID == image.ID) == null)
+            {
+                _context.Images.Add(image);
+            }
+            else
+            {
+                _context.Images.Update(img);
+            }
+            await _context.SaveChangesAsync();
         }
     }
 }
