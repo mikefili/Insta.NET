@@ -16,9 +16,14 @@ namespace InstaDOTNET.Models.Services
             _context = context;
         }
 
-        public Task DeleteAsync(int id)
+        public async Task DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            Image image = await _context.Images.FindAsync(id);
+            if (image != null)
+            {
+                _context.Remove(image);
+                await _context.SaveChangesAsync();
+            }
         }
 
         public Task<Image> FindImage(int id)
