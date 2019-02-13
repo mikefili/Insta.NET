@@ -1,3 +1,7 @@
 ﻿@page
-@{
+@using InstaDOTNET.Models.Interfaces
+@inject IImage ImageManager
+
+@{ 
+    var images = await ImageManager.GetImagesAsync();
 }
