@@ -31,13 +31,18 @@ namespace InstaDOTNET.Pages.Images
 
         public async Task<IActionResult> OnPost()
         {
-            // make call to db w/ ID
-
+            // make call to db w/ ID or create new if ID does not exist
+            var img = await _image.FindImageAsync(ID.GetValueOrDefault()) ?? new Image();
 
             // set the data from the db to the new data from Image/user input
-
+            img.Name = Image.Name;
+            img.Author = Image.Author;
+            img.Caption = Image.Caption;
+            img.URL = Image.URL;
 
             // save the image in the db
+            await _image.SaveAsync(img);
+            return RedirectToPage("/Images/Index", new { id = img.ID });
         }
 
         public async Task<IActionResult> OnPostDelete()
