@@ -14,6 +14,52 @@ namespace InstaDOTNET.Data
 
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Image>().HasData(
+                new Image
+                {
+                    ID = 1,
+                    Name = "Image One",
+                    Author = "Mike F.",
+                    Caption = "This is the first test image",
+                    URL = "image_one.png"
+                },
+                new Image
+                {
+                    ID = 2,
+                    Name = "Image Two",
+                    Author = "Mike F.",
+                    Caption = "This is the second test image",
+                    URL = "image_two.png"
+                },
+                new Image
+                {
+                    ID = 3,
+                    Name = "Image Three",
+                    Author = "Mike F.",
+                    Caption = "This is the third test image",
+                    URL = "image_three.png"
+                },
+                new Image
+                {
+                    ID = 4,
+                    Name = "Image Four",
+                    Author = "Mike F.",
+                    Caption = "This is the fourth test image",
+                    URL = "image_four.png"
+                },
+                new Image
+                {
+                    ID = 5,
+                    Name = "Image Five",
+                    Author = "Mike F.",
+                    Caption = "This is the fifth test image",
+                    URL = "image_five.png"
+                }
+                );
+        }
+
         public DbSet<Image> Images { get; set; }
     }
 }
