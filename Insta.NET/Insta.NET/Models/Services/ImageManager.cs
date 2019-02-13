@@ -33,9 +33,9 @@ namespace InstaDOTNET.Models.Services
             return image;
         }
 
-        public Task<List<Image>> GetImagesAsync()
+        public async Task<List<Image>> GetImagesAsync()
         {
-            throw new NotImplementedException();
+            return await _context.Images.ToListAsync();
         }
 
         public Task SaveAsync(Image image)
