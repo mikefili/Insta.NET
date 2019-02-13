@@ -2,15 +2,14 @@
 @using InstaDOTNET.Models.Interfaces
 @inject IImage ImageManager
 
-@{ 
+@{
     var images = await ImageManager.GetImagesAsync();
 }
-
+<h1>Insta.NET</h1>
 @foreach (var image in images)
 {
     <div>
-        <h3>@image.Name</h3>
-        <img src="@image.URL" />
+        <h2>@image.Name</h2>
         <table>
             <tbody>
                 <tr>
@@ -19,6 +18,7 @@
                 </tr>
             </tbody>
         </table>
+        <img src="@image.URL" />
         <p>"@image.Caption"</p>
     </div>
 }

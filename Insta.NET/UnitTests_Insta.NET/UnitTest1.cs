@@ -1,14 +1,18 @@
 using System;
 using Xunit;
+using InstaDOTNET;
+using InstaDOTNET.Models;
 
 namespace UnitTests_Insta.NET
 {
-    public class UnitTest1
+    public class ImageUnitTests
     {
         [Fact]
-        public void Test1()
+        public void CanGetImageName()
         {
-
+            Image testImage = new Image();
+            testImage.Name = "Test Name";
+            Assert.Equal("Test Name", testImage.Name);
         }
     }
 }
