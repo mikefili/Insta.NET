@@ -40,5 +40,22 @@ namespace UnitTests_Insta.NET
             testImage.Author = "Test Author One";
             Assert.Equal("Test Author One", testImage.Author);
         }
+
+        [Fact]
+        public void CanGetImageCaption()
+        {
+            Image testImage = new Image();
+            testImage.Caption = "Test Caption";
+            Assert.Equal("Test Caption", testImage.Caption);
+        }
+
+        [Fact]
+        public void CanSetImageCaption()
+        {
+            Image testImage = new Image();
+            testImage.Caption = "Test Caption";
+            testImage.Caption = "Test Caption One";
+            Assert.Equal("Test Caption One", testImage.Caption);
+        }
     }
 }
