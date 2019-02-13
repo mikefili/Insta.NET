@@ -4,37 +4,39 @@
     ViewData["Title"] = "Manage";
     Layout = "_Layout";
 }
-<h1 class="pad-bottom-s pad-top-s">Edit Post</h1>
-<div class="polaroid center pad-top-s thin-border">
-    <form method="post">
-        <img src="@Model.Image.URL" class="thin-border" />
-        <div class="pad-top-xs">
-            <table class="text-s">
-                <tbody>
-                    <tr>
-                        <td class="pad-bottom-xs pad-right-s"><label asp-for="Image.Name"></label></td>
-                        <td><input asp-for="Image.Name" /></td>
-                    </tr>
-                    <tr>
-                        <td class="pad-bottom-xs pad-right-s"><label asp-for="Image.Author"></label></td>
-                        <td><input asp-for="Image.Author" /></td>
-                    </tr>
-                    <tr>
-                        <td class="pad-bottom-xs pad-right-s"><label asp-for="Image.URL"></label></td>
-                        <td><input asp-for="Image.URL" /></td>
-                    </tr>
-                    <tr>
-                        <td class="pad-bottom-xs pad-right-s"><label asp-for="Image.Caption"></label></td>
-                        <td><textarea rows="4" asp-for="Image.Caption"></textarea></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="pad-bottom-s pad-top-xs flex-row-container">
-            <button type="submit">Save Changes</button>
-            <button type="submit" asp-page-handler="Delete">
-                Delete Post
-            </button>
-        </div>
-    </form>
-</div>
+<h1 class="pad-bottom-s pad-top-s center title">Edit Post</h1>
+<main>
+    <div class="polaroid center pad-top-s thin-border">
+        <form method="post">
+            <img src="@Model.Image.URL" class="thin-border" />
+            <div class="pad-top-xs">
+                <table class="text-s">
+                    <tbody>
+                        <tr>
+                            <td class="pad-bottom-xs pad-right-s"><label asp-for="Image.Name"></label></td>
+                            <td><input asp-for="Image.Name" /></td>
+                        </tr>
+                        <tr>
+                            <td class="pad-bottom-xs pad-right-s"><label asp-for="Image.Author"></label></td>
+                            <td><input asp-for="Image.Author" /></td>
+                        </tr>
+                        <tr>
+                            <td class="pad-bottom-xs pad-right-s"><label asp-for="Image.URL"></label></td>
+                            <td><input asp-for="Image.URL" /></td>
+                        </tr>
+                        <tr>
+                            <td class="pad-bottom-xs pad-right-s"><label asp-for="Image.Caption"></label></td>
+                            <td><textarea rows="4" asp-for="Image.Caption"></textarea></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pad-bottom-s pad-top-xs flex-row-container">
+                <button type="submit">Save Changes</button>
+                <button type="submit" asp-page-handler="Delete">
+                    Delete Post
+                </button>
+            </div>
+        </form>
+    </div>
+</main>

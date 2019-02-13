@@ -3,24 +3,26 @@
 @{
     Layout = "_Layout";
 }
-<h1 class="pad-bottom-s pad-top-s">Post Details</h1>
-<div class="polaroid center pad-top-s thin-border">
-    <img src="@Model.Image.URL" class="thin-border"/>
-    <table class="text-s">
-        <tbody class="align-left">
-            <tr>
-                <td class="pad-bottom-xs pad-right-s"><label asp-for="Image.Name"></label></td>
-                <td><label asp-for="Image.Name">@Model.Image.Name</label></td>
-            </tr>
-            <tr>
-                <td class="pad-bottom-xs pad-right-s"><label asp-for="Image.Author"></label></td>
-                <td><label asp-for="Image.Author">@Model.Image.Author</label></td>
-            </tr>
-            <tr>
-                <td class="pad-bottom-xs pad-right-s"><label asp-for="Image.Caption"></label></td>
-                <td><label asp-for="Image.Caption">@Model.Image.Caption</label></td>
-            </tr>
-        </tbody>
-    </table>
-    <a asp-page="/Images/Manage" asp-route-id="@Model.Image.ID">Edit Post</a>
-</div>
+<h1 class="pad-bottom-s pad-top-s center">Post Details</h1>
+<main>
+    <div class="polaroid center pad-top-s thin-border">
+        <img src="@Model.Image.URL" class="thin-border" />
+        <table class="text-s">
+            <tbody class="align-left">
+                <tr>
+                    <td class="pad-bottom-xs pad-right-s"><label asp-for="Image.Name"></label></td>
+                    <td><label asp-for="Image.Name">@Model.Image.Name</label></td>
+                </tr>
+                <tr>
+                    <td class="pad-bottom-xs pad-right-s"><label asp-for="Image.Author"></label></td>
+                    <td><label asp-for="Image.Author">@Model.Image.Author</label></td>
+                </tr>
+                <tr>
+                    <td class="pad-bottom-xs pad-right-s"><label asp-for="Image.Caption"></label></td>
+                    <td><label asp-for="Image.Caption">@Model.Image.Caption</label></td>
+                </tr>
+            </tbody>
+        </table>
+        <a asp-page="/Images/Manage" asp-route-id="@Model.Image.ID" class="">Edit Post</a>
+    </div>
+</main>

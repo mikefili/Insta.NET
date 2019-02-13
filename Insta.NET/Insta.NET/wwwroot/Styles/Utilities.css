@@ -172,22 +172,3 @@
     transition: 0.5s ease;
     box-shadow: 0px 2.5px 5px 0px rgba(0, 0, 0, 0.4);
 }
-
-.scrollable {
-    overflow-y: no-content;
-    height: 20px;
-}
-
-.scrollable::-webkit-scrollbar {
-    width: 1em;
-}
-
-.scrollable::-webkit-scrollbar-track {
-    background-color: none;
-}
-
-.scrollable::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 0.5vw;
-    cursor: pointer;
-}

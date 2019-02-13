@@ -13,10 +13,10 @@ namespace InstaDOTNET.Migrations
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(nullable: true),
-                    Author = table.Column<string>(nullable: true),
-                    Caption = table.Column<string>(nullable: true),
-                    URL = table.Column<string>(nullable: true)
+                    Name = table.Column<string>(nullable: false),
+                    Author = table.Column<string>(nullable: false),
+                    Caption = table.Column<string>(nullable: false),
+                    URL = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {

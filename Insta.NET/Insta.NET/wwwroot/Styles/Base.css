@@ -57,9 +57,24 @@ footer {
 
 button {
     padding: 0.3rem 0.6rem 0.3rem 0.6rem;
-    border-radius: 0.3rem;
-    background-image: linear-gradient(rgba(243, 83, 37, 1), rgba(243, 83, 37, 0.5));
+    border-radius: 0.5rem;
+    /*background-image: linear-gradient(rgba(243, 83, 37, 1), rgba(243, 83, 37, 0.5));*/
     color: white;
+    text-decoration: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: #E74C3C;
+    border-bottom: 5px solid #BD3E31;
+    text-shadow: 0px -2px #BD3E31;
+}
+
+button:active {
+    transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+	transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
 }
 
 .logo {
@@ -80,6 +95,13 @@ button {
     font-size: 4rem;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
+}
+
+.title {
+    background: -webkit-linear-gradient(#fff, #ccc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4rem;
 }
 
 .text-red {
@@ -114,7 +136,6 @@ i {
 .polaroid {
     background-color: #fff;
     padding: 0 1rem 0 1rem;
-    flex: 25%;
 }
 
 .thin-border {
@@ -122,6 +143,10 @@ i {
 }
 
 @media (max-width: 560px) {
+    .logo {
+        float: left;
+    }
+
     .logoInsta {
         font-size: 2.5rem;
     }
