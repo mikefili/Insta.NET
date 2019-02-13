@@ -1,8 +1,17 @@
-﻿@page
+﻿@page "{id?}"
 @model InstaDOTNET.Pages.Images.ManageModel
 @{
     ViewData["Title"] = "Manage";
 }
-
 <h1>Manage</h1>
 
+<form method="post">
+    <label asp-for="Image.Name"></label>
+    <input asp-for="Image.Name" />
+
+    <label asp-for="Image.Author"></label>
+    <input asp-for="Image.Author" />
+
+    <label asp-for="Image.Caption"></label>
+    <textarea rows="4" asp-for="Image.Caption"></textarea>
+</form>
