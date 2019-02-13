@@ -5,3 +5,20 @@
 @{ 
     var images = await ImageManager.GetImagesAsync();
 }
+
+@foreach (var image in images)
+{
+    <div>
+        <h3>@image.Name</h3>
+        <h4>@image.URL</h4>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Photo by: </td>
+                    <td>@image.Author</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>"@image.Caption"</p>
+    </div>
+}
