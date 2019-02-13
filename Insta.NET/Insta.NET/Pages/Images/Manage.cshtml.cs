@@ -24,9 +24,9 @@ namespace InstaDOTNET.Pages.Images
             _image = image;
         }
 
-        public void OnGet()
+        public async Task OnGet()
         {
-
+            Image = await _image.FindImageAsync(ID.GetValueOrDefault()) ?? new Image();
         }
     }
 }
