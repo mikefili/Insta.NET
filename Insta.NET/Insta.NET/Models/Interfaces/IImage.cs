@@ -11,10 +11,10 @@ namespace InstaDOTNET.Models.Interfaces
         Task DeleteAsync(int id);
 
         // Find
-        Task<Image> FindImage(int id);
+        Task<Image> FindImageAsync(int id);
 
         // GetAll
-        Task<List<Image>> GetImages();
+        Task<List<Image>> GetImagesAsync();
 
         // Save
         Task SaveAsync(Image image);

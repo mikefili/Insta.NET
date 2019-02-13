@@ -1,5 +1,6 @@
 ﻿using InstaDOTNET.Data;
 using InstaDOTNET.Models.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,12 +27,13 @@ namespace InstaDOTNET.Models.Services
             }
         }
 
-        public Task<Image> FindImage(int id)
+        public async Task<Image> FindImageAsync(int id)
         {
-            throw new NotImplementedException();
+            Image image = await _context.Images.FirstOrDefaultAsync(img => img.ID == id);
+            return image;
         }
 
-        public Task<List<Image>> GetImages()
+        public Task<List<Image>> GetImagesAsync()
         {
             throw new NotImplementedException();
         }
