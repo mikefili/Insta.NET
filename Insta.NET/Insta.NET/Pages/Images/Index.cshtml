@@ -2,7 +2,25 @@
 @model InstaDOTNET.Pages.Images.IndexModel
 @{
 }
-
-<div>
-    <label ></label>
-</div>
+<h1>Post Details</h1>
+<table>
+    <tbody>
+        <tr>
+            <td><label asp-for="Image.Name"></label></td>
+            <td><label asp-for="Image.Name">@Model.Image.Name</label></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Image.Author"></label></td>
+            <td><label asp-for="Image.Author">@Model.Image.Author</label></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Image.URL"></label></td>
+            <td><label asp-for="Image.URL">@Model.Image.URL</label></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Image.Caption"></label></td>
+            <td><label asp-for="Image.Caption">@Model.Image.Caption</label></td>
+        </tr>
+    </tbody>
+</table>
+<a asp-page="/Images/Manage" asp-route-id="@Model.Image.ID">Edit Post</a>
