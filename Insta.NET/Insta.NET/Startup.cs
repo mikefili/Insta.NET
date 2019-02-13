@@ -23,7 +23,8 @@ namespace Insta.NET
 
         public void ConfigureServices(IServiceCollection services)
         {
-            
+            services.AddMvc();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -33,6 +34,9 @@ namespace Insta.NET
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseMvc();
+            app.UseStaticFiles();
 
             app.Run(async (context) =>
             {
