@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Insta.NET", "Insta.NET\Insta.NET.csproj", "{760D99AA-811A-4579-91A3-CB547EF78FAD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstaDOTNET", "Insta.NET\InstaDOTNET.csproj", "{760D99AA-811A-4579-91A3-CB547EF78FAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests_Insta.NET", "UnitTests_Insta.NET\UnitTests_Insta.NET.csproj", "{B7634AC2-EAD6-4F0F-999B-2050B17359E3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests_InstaDOTNET", "UnitTests_Insta.NET\UnitTests_InstaDOTNET.csproj", "{B7634AC2-EAD6-4F0F-999B-2050B17359E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
