@@ -3,21 +3,29 @@
 @{
     ViewData["Title"] = "Manage";
 }
-<h1>Manage</h1>
+<h1>Edit Post</h1>
 
 <form method="post">
-    <label asp-for="Image.Name"></label>
-    <input asp-for="Image.Name" />
-
-    <label asp-for="Image.Author"></label>
-    <input asp-for="Image.Author" />
-
-    <label asp-for="Image.URL"></label>
-    <input asp-for="Image.URL" />
-
-    <label asp-for="Image.Caption"></label>
-    <textarea rows="4" asp-for="Image.Caption"></textarea>
-
+    <table>
+        <tbody>
+            <tr>
+                <td><label asp-for="Image.Name"></label></td>
+                <td><input asp-for="Image.Name" /></td>
+            </tr>
+            <tr>
+                <td><label asp-for="Image.Author"></label></td>
+                <td><input asp-for="Image.Author" /></td>
+            </tr>
+            <tr>
+                <td><label asp-for="Image.URL"></label></td>
+                <td><input asp-for="Image.URL" /></td>
+            </tr>
+            <tr>
+                <td><label asp-for="Image.Caption"></label></td>
+                <td><textarea rows="4" asp-for="Image.Caption"></textarea></td>
+            </tr>
+        </tbody>
+    </table>
     <button type="submit">Save Changes</button>
     <button type="submit" asp-page-handler="Delete">Delete Post</button>
 </form>
