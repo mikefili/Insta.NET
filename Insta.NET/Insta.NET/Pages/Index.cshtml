@@ -1,24 +1,27 @@
 ﻿@page
 @using InstaDOTNET.Models.Interfaces
 @inject IImage ImageManager
+@{ 
+    Layout = "_Layout";
+}
 @{
     var images = await ImageManager.GetImagesAsync();
 }
-<h1>Insta.NET</h1>
 @foreach (var image in images)
 {
-    <div>
-        <h2>@image.Name</h2>
-        <table>
-            <tbody>
-                <tr>
-                    <td>Photo by: </td>
-                    <td>@image.Author</td>
-                </tr>
-            </tbody>
-        </table>
-        <img src="@image.URL" />
-        <p>"@image.Caption"</p>
-        <a asp-page="/Images/Index" asp-route-id="@image.ID">@image.Name</a>
+    <div class="pad-bottom-m pad-top-s">
+        <div class="polaroid pad-top-s hover-shadow">
+            <img src="@image.URL" class="thin-border" />
+            <h2><a asp-page="/Images/Index" asp-route-id="@image.ID" class="text-red">@image.Name</a></h2>
+            <table>
+                <tbody>
+                    <tr class="pad-bottom-xs text-s">
+                        <td class="pad-right-xs">By:</td>
+                        <td>@image.Author</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="container-s text-caption pad-bottom-s pad-top-s scrollable">"@image.Caption"</p>
+        </div>
     </div>
 }

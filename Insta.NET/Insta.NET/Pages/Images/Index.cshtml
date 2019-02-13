@@ -1,26 +1,26 @@
 ﻿@page "{id}"
 @model InstaDOTNET.Pages.Images.IndexModel
 @{
+    Layout = "_Layout";
 }
-<h1>Post Details</h1>
-<table>
-    <tbody>
-        <tr>
-            <td><label asp-for="Image.Name"></label></td>
-            <td><label asp-for="Image.Name">@Model.Image.Name</label></td>
-        </tr>
-        <tr>
-            <td><label asp-for="Image.Author"></label></td>
-            <td><label asp-for="Image.Author">@Model.Image.Author</label></td>
-        </tr>
-        <tr>
-            <td><label asp-for="Image.URL"></label></td>
-            <td><label asp-for="Image.URL">@Model.Image.URL</label></td>
-        </tr>
-        <tr>
-            <td><label asp-for="Image.Caption"></label></td>
-            <td><label asp-for="Image.Caption">@Model.Image.Caption</label></td>
-        </tr>
-    </tbody>
-</table>
-<a asp-page="/Images/Manage" asp-route-id="@Model.Image.ID">Edit Post</a>
+<h1 class="pad-bottom-s pad-top-s">Post Details</h1>
+<div class="polaroid center pad-top-s thin-border">
+    <img src="@Model.Image.URL" class="thin-border"/>
+    <table class="text-s">
+        <tbody class="align-left">
+            <tr>
+                <td class="pad-bottom-xs pad-right-s"><label asp-for="Image.Name"></label></td>
+                <td><label asp-for="Image.Name">@Model.Image.Name</label></td>
+            </tr>
+            <tr>
+                <td class="pad-bottom-xs pad-right-s"><label asp-for="Image.Author"></label></td>
+                <td><label asp-for="Image.Author">@Model.Image.Author</label></td>
+            </tr>
+            <tr>
+                <td class="pad-bottom-xs pad-right-s"><label asp-for="Image.Caption"></label></td>
+                <td><label asp-for="Image.Caption">@Model.Image.Caption</label></td>
+            </tr>
+        </tbody>
+    </table>
+    <a asp-page="/Images/Manage" asp-route-id="@Model.Image.ID">Edit Post</a>
+</div>

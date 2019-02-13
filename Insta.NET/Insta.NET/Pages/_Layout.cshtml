@@ -5,10 +5,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    <link href="~/Styles/Reset.css" rel="stylesheet" />
+    <link href="~/Styles/Base.css" rel="stylesheet" />
+    <link href="~/Styles/Utilities.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 </head>
 <body>
-    <div>
+    <header>
+        <div class="logo"><span class="logoInsta">Insta</span><span class="logoNET text-red">.</span><span class="logoNET text-green">N</span><span class="logoNET text-yellow">E</span><span class="logoNET text-blue">T</span></div>
+        <nav>
+            <ul>
+                <li><a href="~/"><i class="fa fa-home"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
         @RenderBody()
-    </div>
+    </main>
+    <footer>
+        <p>&#169; Insta.NET 2019</p>
+    </footer>
 </body>
 </html>
