@@ -12,6 +12,12 @@
     <label asp-for="Image.Author"></label>
     <input asp-for="Image.Author" />
 
+    <label asp-for="Image.URL"></label>
+    <input asp-for="Image.URL" />
+
     <label asp-for="Image.Caption"></label>
     <textarea rows="4" asp-for="Image.Caption"></textarea>
+
+    <button type="submit">Save Changes</button>
+    <button type="submit" asp-page-handler="Delete">Delete Post</button>
 </form>
