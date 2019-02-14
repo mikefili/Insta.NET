@@ -16,6 +16,6 @@ namespace InstaDOTNET.Models
         public string CommentString { get; set; }
 
         // navigation property
-        public Image Image { get; set; }
+        public ICollection<Image> Images { get; set; }
     }
 }

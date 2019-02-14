@@ -1,4 +1,5 @@
-﻿using InstaDOTNET.Models.Interfaces;
+﻿using InstaDOTNET.Data;
+using InstaDOTNET.Models.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +9,18 @@ namespace InstaDOTNET.Models.Services
 {
     public class CommentManager : IComment
     {
-        public Task DeleteAsync(int id)
+        private readonly InstaDOTNETDbContext _context;
+
+        public CommentManager(InstaDOTNETDbContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            Comment comment = _context.Comments.FirstOrDefault(c => c.ID == id);
+            _context.Comments.Remove(comment);
+            await _context.SaveChangesAsync();
         }
 
         public Task<Comment> FindCommentAsync(int id)
