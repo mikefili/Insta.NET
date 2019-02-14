@@ -202,11 +202,22 @@ button:active {
 }
 
 i {
+    transition: 0.3s ease;
     color: rgba(0, 0, 0, 0.7);
+}
+
+i:hover {
+    transition: 0.3s ease;
+    color: rgba(243, 83, 37, 1);
 }
 
 .text-s {
     font-size: 1rem;
+}
+
+.text-caption-m {
+    font-size: 1.3rem;
+    font-family: 'Nanum Pen Script', cursive;
 }
 
 .text-caption {
