@@ -175,6 +175,7 @@
 
 .scrollable {
     overflow-y: scroll;
+    max-height: 50px;
 }
 
 .scrollable::-webkit-scrollbar {
