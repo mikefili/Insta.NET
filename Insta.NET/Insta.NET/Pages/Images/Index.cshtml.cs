@@ -23,9 +23,14 @@ namespace InstaDOTNET.Pages.Images
 
         public Image Image { get; set; }
 
-        public async Task OnGet()
+        public async Task OnGetAsync()
         {
             Image = await _image.FindImageAsync(ID);
+        }
+
+        public async Task<IActionResult> OnPostAsync()
+        {
+
         }
     }
 }

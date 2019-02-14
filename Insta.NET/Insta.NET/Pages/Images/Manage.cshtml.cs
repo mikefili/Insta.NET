@@ -24,12 +24,12 @@ namespace InstaDOTNET.Pages.Images
             _image = image;
         }
 
-        public async Task OnGet()
+        public async Task OnGetAsync()
         {
             Image = await _image.FindImageAsync(ID.GetValueOrDefault()) ?? new Image();
         }
 
-        public async Task<IActionResult> OnPost()
+        public async Task<IActionResult> OnPostAsync()
         {
             // make call to db w/ ID or create new if ID does not exist
             var img = await _image.FindImageAsync(ID.GetValueOrDefault()) ?? new Image();
