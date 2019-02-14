@@ -16,7 +16,27 @@
         <div class="pad-bottom-m pad-top-s pad-left-s pad-right-s frame">
             <div class="polaroid hover-shadow pad-bottom-s ">
                 <img src="@image.URL" class="thin-border" />
-                <h2><a asp-page="/Images/Index" asp-route-id="@image.ID" class="text-red a">@image.Name</a></h2>
+                <div class="flex-row-container space-between">
+                    <h2><a asp-page="/Images/Index" asp-route-id="@image.ID" class="text-red a">@image.Name</a></h2>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                    <script>
+                    $(document).ready(function () {
+                        $(".unclicked").ready(function () {
+                            $(".clicked").hide();
+                        });
+                        $(".unclicked").click(function () {
+                            $(".unclicked").hide();
+                            $(".clicked").show();
+                        });
+                        $(".clicked").click(function () {
+                            $(".clicked").hide();
+                            $(".unclicked").show();
+                        })
+                    });
+                    </script>
+                    <i class="far fa-heart unclicked"></i>
+                    <i class="fa fa-heart clicked text-red"></i>
+                </div>
                 <table>
                     <tbody>
                         <tr class="pad-bottom-xs text-s">
