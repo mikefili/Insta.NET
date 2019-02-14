@@ -27,10 +27,5 @@ namespace InstaDOTNET.Pages.Images
         {
             Image = await _image.FindImageAsync(ID);
         }
-
-        public async Task<IActionResult> OnPostAsync()
-        {
-
-        }
     }
 }

@@ -42,10 +42,10 @@ namespace InstaDOTNET.Pages.Images
 
             // save the image in the db
             await _image.SaveAsync(img);
-            return RedirectToPage("/Images/Index", new { id = img.ID });
+            return RedirectToPage("/Index", new { id = img.ID });
         }
 
-        public async Task<IActionResult> OnPostDelete()
+        public async Task<IActionResult> OnPostDeleteAsync()
         {
             await _image.DeleteAsync(ID.Value);
             return RedirectToPage("/Index");

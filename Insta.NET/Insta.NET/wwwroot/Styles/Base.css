@@ -8,17 +8,21 @@ body {
     background-repeat: repeat;
     background-position: top;
     box-sizing: border-box;
+    height: 100%
 }
 
 a {
-    font-variant-caps: all-petite-caps;
     text-decoration: none;
     cursor: pointer;
+}
+
+.a {
+    font-variant-caps: all-petite-caps;
     font-size: 2rem;
 }
 
 nav {
-    order: 2;
+    order: 3;
 }
 
 main {
@@ -28,6 +32,7 @@ main {
     align-items: center;
     flex-wrap: wrap;
     flex-basis: 25%;
+    min-height: 800px;
 }
 
 header {
@@ -35,7 +40,7 @@ header {
     flex-direction: row;
     flex-grow: 1;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 10vw;
     min-height: 100px;
     background-color: rgba(255, 255, 255, 0.5);
@@ -80,6 +85,74 @@ button:active {
 	transform: translate(0px,5px);
     -webkit-transform: translate(0px,5px);
 	border-bottom: 1px solid;
+}
+
+.flex-mid {
+    width: 10vw;
+    order: 2;
+}
+
+.button-s {
+    padding: 0.3rem 0.6rem 0.3rem 0.6rem;
+}
+
+.button-s {
+    padding: 0.1rem 0.6rem 0.1rem 0.6rem;
+    border-radius: 0.5rem;
+    /*background-image: linear-gradient(rgba(243, 83, 37, 1), rgba(243, 83, 37, 0.5));*/
+    color: white;
+    text-decoration: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: #E74C3C;
+    border-bottom: 5px solid #BD3E31;
+    text-shadow: 0px -2px #BD3E31;
+}
+
+.button-s:focus {
+    outline: 0;
+
+}
+
+.button-s:active {
+    transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+	transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
+
+.button {
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    border-radius: 0.5rem;
+    /*background-image: linear-gradient(rgba(243, 83, 37, 1), rgba(243, 83, 37, 0.5));*/
+    color: white;
+    text-decoration: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: #E74C3C;
+    border-bottom: 5px solid #BD3E31;
+    text-shadow: 0px -2px #BD3E31;
+}
+
+.button:focus {
+    outline: 0;
+
+}
+
+.button:active {
+    transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+	transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
+
+.single-post {
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .logo {
@@ -138,13 +211,28 @@ i {
     font-family: 'Indie Flower', cursive;
 }
 
+.frame {
+    max-height: 332px;
+}
+
 .polaroid {
     background-color: #fff;
     padding: 1rem 1rem 0 1rem;
+    max-height: 332px;
+}
+
+.single-polaroid {
+    max-height: 100%;
 }
 
 .thin-border {
     border: 1px solid #999;
+    min-width: 200px;
+    min-height: 200px;
+}
+
+.caption {
+    max-width: 200px;
 }
 
 @media (max-width: 560px) {
@@ -153,16 +241,26 @@ i {
     }
 
     .logoInsta {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .logoNET {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     main {
         flex-direction: column;
         justify-content: space-between;
+    }
+
+    header {
+        height: 60px;
+        min-height: 60px;
+        margin-bottom: 2vw;
+    }
+
+    .flex-mid {
+        width: 1vw;
     }
 }
 

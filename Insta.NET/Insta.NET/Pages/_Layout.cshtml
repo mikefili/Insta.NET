@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
+    <title>Insta.NET</title>
     <link href="~/Styles/Reset.css" rel="stylesheet" />
     <link href="~/Styles/Base.css" rel="stylesheet" />
     <link href="~/Styles/Utilities.css" rel="stylesheet" />
@@ -12,11 +12,12 @@
 </head>
 <body>
     <header>
-        <div class="logo"><span class="logoInsta">Insta</span><span class="logoNET text-red">.</span><span class="logoNET text-green">N</span><span class="logoNET text-yellow">E</span><span class="logoNET text-blue">T</span></div>
+        <a href="~/"><div class="logo pad-left-s"><span class="logoInsta">Insta</span><span class="logoNET text-red">.</span><span class="logoNET text-green">N</span><span class="logoNET text-yellow">E</span><span class="logoNET text-blue">T</span></div></a>
+        <div class="flex-mid"></div>
         <nav>
-            <ul class="flex-row-container">
+            <ul class="flex-row-container pad-right-s">
                 <li><a href="~/" title="Home"><i class="fa fa-home pad-right-xs"></i></a></li>
-                <li><a href="" title="Add a Post"><i class="fa fa-plus pad-right-xs"></i></a></li>
+                <li><a asp-page="/Images/Manage" title="Add a Post"><i class="fa fa-plus pad-right-xs"></i></a></li>
                 <li><a href="https://github.com/mikefili/LAB15-Insta.NET" title="Visit GitHub Repo" target="_blank"><i class="fa fa-github"></i></a></li>
             </ul>
         </nav>

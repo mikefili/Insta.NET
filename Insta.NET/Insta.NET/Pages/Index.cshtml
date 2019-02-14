@@ -7,25 +7,25 @@
 @{
     var images = await ImageManager.GetImagesAsync();
 }
-<div class="center pad-top-xs">
-    <button href="/">+ Add a Post</button>
-</div>
+@*<div class="center pad-top-m pad-bottom-m">
+    <a asp-page="/Images/Manage" class="button hover-shadow">+ Add a Post</a>
+</div>*@
 <main>
     @foreach (var image in images)
     {
-        <div class="pad-bottom-m pad-top-s pad-left-s pad-right-s">
-            <div class="polaroid hover-shadow">
+        <div class="pad-bottom-m pad-top-s pad-left-s pad-right-s frame">
+            <div class="polaroid hover-shadow pad-bottom-s ">
                 <img src="@image.URL" class="thin-border" />
-                <h2><a asp-page="/Images/Index" asp-route-id="@image.ID" class="text-red">@image.Name</a></h2>
+                <h2><a class="text-red a">@image.Name</a></h2>
                 <table>
                     <tbody>
                         <tr class="pad-bottom-xs text-s">
-                            <td class="pad-right-xs">By:</td>
+                            <td class="pad-right-xs bold">By:</td>
                             <td>@image.Author</td>
                         </tr>
                     </tbody>
                 </table>
-                <p class="container-s text-caption pad-bottom-s pad-top-s">"@image.Caption"</p>
+                <div class="caption text-caption pad-top-xs scrollable">"@image.Caption"</div>
             </div>
         </div>
     }
