@@ -1,0 +1,41 @@
+﻿@page "{id?}"
+@model InstaDOTNET.Pages.Images.ManageModel
+@{
+    ViewData["Title"] = "Manage";
+    Layout = "_Layout";
+}
+<main class="pad-top-s single-post">
+    <div class="flex-column-container">
+        <div class="polaroid single-polaroid center pad-top-s thin-border">
+            <form method="post">
+                <img src="@Model.Image.URL" onerror="https://via.placeholder.com/200" class="thin-border" />
+                <div class="pad-top-xs">
+                    <table class="text-s">
+                        <tbody class="align-left">
+                            <tr>
+                                <td class="pad-bottom-xs pad-right-s bold"><label asp-for="Image.Name"></label></td>
+                                <td><input asp-for="Image.Name" /></td>
+                            </tr>
+                            <tr>
+                                <td class="pad-bottom-xs pad-right-s bold"><label asp-for="Image.Author"></label></td>
+                                <td><input asp-for="Image.Author" /></td>
+                            </tr>
+                            <tr>
+                                <td class="pad-bottom-xs pad-right-s bold"><label asp-for="Image.URL"></label></td>
+                                <td><input asp-for="Image.URL" /></td>
+                            </tr>
+                            <tr>
+                                <td class="pad-bottom-xs pad-right-s bold"><label asp-for="Image.Caption"></label></td>
+                                <td><textarea rows="4" asp-for="Image.Caption"></textarea></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pad-bottom-s pad-top-xs flex-row-container">
+                    <button type="submit">Save</button>
+                    <button type="submit" asp-page-handler="Delete">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

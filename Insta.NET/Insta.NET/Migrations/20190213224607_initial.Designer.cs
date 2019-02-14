@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InstaDOTNET.Migrations
 {
     [DbContext(typeof(InstaDOTNETDbContext))]
-    [Migration("20190213064650_seededData")]
-    partial class seededData
+    [Migration("20190213224607_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,13 +26,17 @@ namespace InstaDOTNET.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Author");
+                    b.Property<string>("Author")
+                        .IsRequired();
 
-                    b.Property<string>("Caption");
+                    b.Property<string>("Caption")
+                        .IsRequired();
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
-                    b.Property<string>("URL");
+                    b.Property<string>("URL")
+                        .IsRequired();
 
                     b.HasKey("ID");
 
@@ -45,7 +49,7 @@ namespace InstaDOTNET.Migrations
                             Author = "Mike F.",
                             Caption = "This is the first test image",
                             Name = "Image One",
-                            URL = "image_one.png"
+                            URL = "https://via.placeholder.com/200"
                         },
                         new
                         {
@@ -53,7 +57,7 @@ namespace InstaDOTNET.Migrations
                             Author = "Mike F.",
                             Caption = "This is the second test image",
                             Name = "Image Two",
-                            URL = "image_two.png"
+                            URL = "https://via.placeholder.com/200"
                         },
                         new
                         {
@@ -61,7 +65,7 @@ namespace InstaDOTNET.Migrations
                             Author = "Mike F.",
                             Caption = "This is the third test image",
                             Name = "Image Three",
-                            URL = "image_three.png"
+                            URL = "https://via.placeholder.com/200"
                         },
                         new
                         {
@@ -69,7 +73,7 @@ namespace InstaDOTNET.Migrations
                             Author = "Mike F.",
                             Caption = "This is the fourth test image",
                             Name = "Image Four",
-                            URL = "image_four.png"
+                            URL = "https://via.placeholder.com/200"
                         },
                         new
                         {
@@ -77,7 +81,7 @@ namespace InstaDOTNET.Migrations
                             Author = "Mike F.",
                             Caption = "This is the fifth test image",
                             Name = "Image Five",
-                            URL = "image_five.png"
+                            URL = "https://via.placeholder.com/200"
                         });
                 });
 #pragma warning restore 612, 618

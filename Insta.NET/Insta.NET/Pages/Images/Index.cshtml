@@ -1,8 +1,31 @@
 ﻿@page "{id}"
 @model InstaDOTNET.Pages.Images.IndexModel
 @{
+    Layout = "_Layout";
 }
-
-<div>
-    <label></label>
-</div>
+<main class="pad-top-s single-post">
+    <div class="flex-column-container">
+        <div class="polaroid single-polaroid center pad-top-s thin-border">
+            <img src="@Model.Image.URL" class="thin-border" />
+            <div class="pad-bottom-xs pad-top-s">
+                <table class="text-s">
+                    <tbody class="align-left">
+                        <tr>
+                            <td class="pad-bottom-xs pad-right-s bold"><label asp-for="Image.Name"></label></td>
+                            <td><label asp-for="Image.Name">@Model.Image.Name</label></td>
+                        </tr>
+                        <tr>
+                            <td class="pad-bottom-xs pad-right-s bold"><label asp-for="Image.Author"></label></td>
+                            <td><label asp-for="Image.Author">@Model.Image.Author</label></td>
+                        </tr>
+                        <tr>
+                            <td class="pad-bottom-xs pad-right-s bold"><label asp-for="Image.Caption"></label></td>
+                            <td class="scrollable"><label asp-for="Image.Caption">@Model.Image.Caption</label></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a asp-page="/Images/Manage" asp-route-id="@Model.Image.ID" title="Edit Post"><i class="fa fa-edit"></i></a>
+            </div>
+        </div>
+    </div>
+</main>

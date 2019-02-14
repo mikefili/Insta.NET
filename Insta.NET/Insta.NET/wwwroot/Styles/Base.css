@@ -1,0 +1,271 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Chewy|Indie+Flower|Nunito|Titillium+Web:900');
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.6rem;
+    /*background-color: rgba(0, 0, 0, 0.1);*/
+    background-image: url("/Assets/cork.jpg");
+    background-repeat: repeat;
+    background-position: top;
+    box-sizing: border-box;
+    height: 100%
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.a {
+    font-variant-caps: all-petite-caps;
+    font-size: 2rem;
+}
+
+nav {
+    order: 3;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-basis: 25%;
+    min-height: 800px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vw;
+    min-height: 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-bottom: 2px inset rgba(255, 255, 255, 0.3);
+}
+
+footer {
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: 3vw;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-size: 1rem;
+    border-top: 2px inset rgba(255, 255, 255, 0.3);
+}
+
+button {
+    padding: 0.3rem 0.6rem 0.3rem 0.6rem;
+    border-radius: 0.5rem;
+    /*background-image: linear-gradient(rgba(243, 83, 37, 1), rgba(243, 83, 37, 0.5));*/
+    color: white;
+    text-decoration: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: #E74C3C;
+    border-bottom: 5px solid #BD3E31;
+    text-shadow: 0px -2px #BD3E31;
+}
+
+button:focus {
+    outline: 0;
+
+}
+
+button:active {
+    transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+	transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
+
+.flex-mid {
+    width: 10vw;
+    order: 2;
+}
+
+.button-s {
+    padding: 0.3rem 0.6rem 0.3rem 0.6rem;
+}
+
+.button-s {
+    padding: 0.1rem 0.6rem 0.1rem 0.6rem;
+    border-radius: 0.5rem;
+    /*background-image: linear-gradient(rgba(243, 83, 37, 1), rgba(243, 83, 37, 0.5));*/
+    color: white;
+    text-decoration: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: #E74C3C;
+    border-bottom: 5px solid #BD3E31;
+    text-shadow: 0px -2px #BD3E31;
+}
+
+.button-s:focus {
+    outline: 0;
+
+}
+
+.button-s:active {
+    transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+	transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
+
+.button {
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    border-radius: 0.5rem;
+    /*background-image: linear-gradient(rgba(243, 83, 37, 1), rgba(243, 83, 37, 0.5));*/
+    color: white;
+    text-decoration: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: #E74C3C;
+    border-bottom: 5px solid #BD3E31;
+    text-shadow: 0px -2px #BD3E31;
+}
+
+.button:focus {
+    outline: 0;
+
+}
+
+.button:active {
+    transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+	transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
+
+.single-post {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    order: 1;
+}
+
+.logoInsta {
+    font-family: 'Chewy', cursive;
+    font-size: 4rem;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.1rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.logoNET {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 4rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.title {
+    background: -webkit-linear-gradient(#fff, #ccc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+}
+
+.text-red {
+    color: rgba(243, 83, 37, 1);
+}
+
+.text-green {
+    color: rgba(129, 188, 6, 1);
+}
+
+.text-yellow {
+    color: rgba(255, 186, 8, 1);
+}
+
+.text-blue {
+    color: rgba(5, 166, 240, 1);
+}
+
+i {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.text-s {
+    font-size: 1rem;
+}
+
+.text-caption {
+    font-size: 1rem;
+    font-family: 'Indie Flower', cursive;
+}
+
+.frame {
+    max-height: 332px;
+}
+
+.polaroid {
+    background-color: #fff;
+    padding: 1rem 1rem 0 1rem;
+    max-height: 332px;
+}
+
+.single-polaroid {
+    max-height: 100%;
+}
+
+.thin-border {
+    border: 1px solid #999;
+    min-width: 200px;
+    min-height: 200px;
+}
+
+.caption {
+    max-width: 200px;
+}
+
+@media (max-width: 560px) {
+    .logo {
+        float: left;
+    }
+
+    .logoInsta {
+        font-size: 2rem;
+    }
+
+    .logoNET {
+        font-size: 2rem;
+    }
+
+    main {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    header {
+        height: 60px;
+        min-height: 60px;
+        margin-bottom: 2vw;
+    }
+
+    .flex-mid {
+        width: 1vw;
+    }
+}
+
+@media (max-width: 1800px) {
+    main {
+        max-width: 100vw;
+    }
+}
