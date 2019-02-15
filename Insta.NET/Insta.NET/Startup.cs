@@ -31,7 +31,7 @@ namespace InstaDOTNET
             services.AddDbContext<InstaDOTNETDbContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
 
             services.AddScoped<IImage, ImageManager>();
-            //services.AddScoped<IComment, CommentManager>();
+            services.AddScoped<IComment, CommentManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
