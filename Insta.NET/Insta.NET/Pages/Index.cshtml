@@ -27,7 +27,7 @@
                     </table>
                     <div>
                         <a asp-page="/Images/Index" asp-route-id="@image.ID" class="text-red a" title="View Details/Edit"><i class="far fa-image"></i></a>
-                        <a title="Comment" class="a"><i class="a far fa-comment"></i></a>
+                        <a asp-page="/Images/Comments" asp-route-id="@image.ID" title="Comment" class="a"><i class="a far fa-comment"></i></a>
                     </div>
                 </div>
                 <div class="caption text-caption pad-top-xs scrollable">"@image.Caption"</div>
