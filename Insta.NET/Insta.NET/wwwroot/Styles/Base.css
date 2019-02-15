@@ -249,6 +249,41 @@ i:hover {
     max-width: 200px;
 }
 
+.post-it {
+    width: 20vw;
+    min-width: 200px;
+    max-width: 500px;
+    height: 20vw;
+    min-height: 200px;
+    max-height: 500px;
+    background-color: #FFFFA5;
+    border: 1px solid #cccc84;
+    /*transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);*/
+}
+
+.post-it-input {
+    background-color: #FFFFA5;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #cccc84;
+}
+
+.post-it-TA {
+    background-color: #FFFFA5;
+    outline: none;
+    border: none;
+    width: 90%;
+}
+
+.post-it-TA:hover {
+    cursor: text;
+}
+
 @media (max-width: 560px) {
     .logo {
         float: left;

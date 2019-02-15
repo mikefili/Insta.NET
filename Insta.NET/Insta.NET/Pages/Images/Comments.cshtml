@@ -1,7 +1,38 @@
 ﻿@page "{id}"
 @model InstaDOTNET.Pages.Images.CommentsModel
+@using InstaDOTNET.Models.Interfaces
+@inject IComment CommentManager
 @{
     ViewData["Title"] = "Comments";
     Layout = "_Layout";
+    var comments = CommentManager.GetCommentsAsync();
 }
-YOU MADE IT TO THE COMMENTS PAGE!
+<div class="single-post center">
+    <div class="pad-top-s pad-bottom-m">
+        <form method="post">
+            <div class="post-it hover-shadow center">
+                <div class="flex-column-container pad-bottom-s">
+                    <label asp-for="Comment.CommentString" class="text-s">Comment here: </label>
+                    <textarea rows="7" asp-for="Comment.CommentString" class="post-it-TA text-caption"></textarea>
+                </div>
+                <div class="center">
+                    <label asp-for="Comment.CommentAuthor" class="bold text-s">By: </label>
+                    <input asp-for="Comment.CommentAuthor" class="post-it-input" />
+                </div>
+            </div>
+            <div class="pad-bottom-s"></div>
+            <button type="submit" class="button">Add Comment</button>
+        </form>
+    </div>
+</div>
+<div class="flex-row-container">
+    @foreach (var comment in await comments)
+    {
+        <div class="post-it hover-shadow">
+            <div class="pad-top-s pad-left-s pad-right-s pad-bottom-s">
+                <div class="text-s text-caption">@comment.CommentString</div>
+            </div>
+            <div class="text-s pad-left-s"><span class="bold">By:</span> @comment.CommentAuthor</div>
+        </div>
+    }
+</div>

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InstaDOTNET.Migrations
 {
     [DbContext(typeof(InstaDOTNETDbContext))]
-    [Migration("20190215053529_commentsAdded")]
-    partial class commentsAdded
+    [Migration("20190215180111_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

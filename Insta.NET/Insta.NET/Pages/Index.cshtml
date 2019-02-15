@@ -3,8 +3,6 @@
 @inject IImage ImageManager
 @{ 
     Layout = "_Layout";
-}
-@{
     var images = await ImageManager.GetImagesAsync();
 }
 @*<div class="center pad-top-m pad-bottom-m">

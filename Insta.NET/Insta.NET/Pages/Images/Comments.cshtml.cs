@@ -32,7 +32,7 @@ namespace InstaDOTNET.Pages.Images
         public async Task<IActionResult> OnPostAsync()
         {
             // create new comment
-            var com = new Comment();
+            Comment com = new Comment();
 
             // set the comment data to the db
             com.ImageID = ID;
