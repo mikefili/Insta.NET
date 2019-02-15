@@ -28,5 +28,20 @@ namespace InstaDOTNET.Pages.Images
         {
             Comment = new Comment();
         }
+
+        public async Task<IActionResult> OnPostAsync()
+        {
+            // create new comment
+            var com = new Comment();
+
+            // set the comment data to the db
+            com.ImageID = ID;
+            com.CommentString = Comment.CommentString;
+            com.CommentAuthor = Comment.CommentAuthor;
+
+            // save the comment in the db
+            await _comment.SaveAsync(com);
+            return RedirectToPage("/Images/Index", ID);
+        }
     }
 }
