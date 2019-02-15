@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css?family=Chewy|Indie+Flower|Nunito|Titillium+Web:900');
+﻿@import url('https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Chewy|Nunito|Titillium+Web:900');
 
 body {
     font-family: 'Nunito', sans-serif;
@@ -51,7 +51,7 @@ footer {
     clear: both;
     position: relative;
     z-index: 10;
-    height: 3em;
+    height: 1em;
     margin-top: 3vw;
     padding: 1rem;
     background-color: rgba(255, 255, 255, 0.5);
@@ -72,11 +72,14 @@ button {
     background-color: #E74C3C;
     border-bottom: 5px solid #BD3E31;
     text-shadow: 0px -2px #BD3E31;
+    box-shadow: 0px 2.5px 5px 0px rgba(0, 0, 0, 0.4);
+    transition: 0.5s ease;
 }
 
 button:focus {
     outline: 0;
-
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.4);
+    transition: 0.5s ease;
 }
 
 button:active {
@@ -162,7 +165,7 @@ button:active {
 .logoInsta {
     font-family: 'Chewy', cursive;
     font-size: 4rem;
-    color: rgb(255, 255, 255);
+    color: #fff;
     letter-spacing: 0.1rem;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
@@ -199,16 +202,27 @@ button:active {
 }
 
 i {
+    transition: 0.3s ease;
     color: rgba(0, 0, 0, 0.7);
+}
+
+i:hover {
+    transition: 0.3s ease;
+    color: rgba(243, 83, 37, 1);
 }
 
 .text-s {
     font-size: 1rem;
 }
 
+.text-caption-m {
+    font-size: 1.3rem;
+    font-family: 'Nanum Pen Script', cursive;
+}
+
 .text-caption {
     font-size: 1rem;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Nanum Pen Script', cursive;
 }
 
 .frame {

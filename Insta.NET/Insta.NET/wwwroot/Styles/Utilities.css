@@ -173,8 +173,13 @@
     box-shadow: 0px 2.5px 5px 0px rgba(0, 0, 0, 0.4);
 }
 
+.auto-align {
+    align-self: auto;
+}
+
 .scrollable {
     overflow-y: scroll;
+    max-height: 50px;
 }
 
 .scrollable::-webkit-scrollbar {

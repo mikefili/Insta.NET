@@ -7,11 +7,15 @@
 <main class="pad-top-s single-post">
     <div class="flex-column-container">
         <div class="polaroid single-polaroid center pad-top-s thin-border">
-            <form method="post">
+            <form method="post" enctype="multipart/form-data">
                 <img src="@Model.Image.URL" onerror="https://via.placeholder.com/200" class="thin-border" />
                 <div class="pad-top-xs">
                     <table class="text-s">
                         <tbody class="align-left">
+                            <tr>
+                                <td><label asp-for="Image"></label></td>
+                                <td><input asp-for="Image" type="file" /></td>
+                            </tr>
                             <tr>
                                 <td class="pad-bottom-xs pad-right-s bold"><label asp-for="Image.Name"></label></td>
                                 <td><input asp-for="Image.Name" /></td>
@@ -32,8 +36,8 @@
                     </table>
                 </div>
                 <div class="pad-bottom-s pad-top-xs flex-row-container">
-                    <button type="submit">Save</button>
-                    <button type="submit" asp-page-handler="Delete">Delete</button>
+                    <button type="submit" class="container-xs">Save</button>
+                    <button type="submit" class="container-xs" asp-page-handler="Delete">Delete</button>
                 </div>
             </form>
         </div>

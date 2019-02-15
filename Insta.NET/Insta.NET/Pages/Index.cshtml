@@ -16,15 +16,20 @@
         <div class="pad-bottom-m pad-top-s pad-left-s pad-right-s frame">
             <div class="polaroid hover-shadow pad-bottom-s ">
                 <img src="@image.URL" class="thin-border" />
-                <h2><a class="text-red a">@image.Name</a></h2>
-                <table>
-                    <tbody>
-                        <tr class="pad-bottom-xs text-s">
-                            <td class="pad-right-xs bold">By:</td>
-                            <td>@image.Author</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="flex-row-container space-between auto-align">
+                    <table>
+                        <tbody>
+                            <tr class="pad-bottom-xs text-s">
+                                <td class="pad-right-xs bold">By:</td>
+                                <td class="text-m text-caption-m bold text-red">@image.Author</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <a asp-page="/Images/Index" asp-route-id="@image.ID" class="text-red a" title="View Details/Edit"><i class="far fa-image"></i></a>
+                        <a title="Comment" class="a"><i class="a far fa-comment"></i></a>
+                    </div>
+                </div>
                 <div class="caption text-caption pad-top-xs scrollable">"@image.Caption"</div>
             </div>
         </div>

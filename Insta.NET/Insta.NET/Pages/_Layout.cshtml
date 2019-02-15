@@ -8,17 +8,17 @@
     <link href="~/Styles/Reset.css" rel="stylesheet" />
     <link href="~/Styles/Base.css" rel="stylesheet" />
     <link href="~/Styles/Utilities.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
     <header>
-        <a href="~/"><div class="logo pad-left-s"><span class="logoInsta">Insta</span><span class="logoNET text-red">.</span><span class="logoNET text-green">N</span><span class="logoNET text-yellow">E</span><span class="logoNET text-blue">T</span></div></a>
+        <a href="~/"><div class="logo pad-left-s"><span class="logoInsta">Insta</span><span class="text-s"> </span><span class="logoNET text-red">.</span><span class="logoNET text-green">N</span><span class="logoNET text-yellow">E</span><span class="logoNET text-blue">T</span></div></a>
         <div class="flex-mid"></div>
         <nav>
             <ul class="flex-row-container pad-right-s">
-                <li><a href="~/" title="Home"><i class="fa fa-home pad-right-xs"></i></a></li>
+                <li><a asp-page="/Index" title="Home"><i class="fa fa-home pad-right-xs"></i></a></li>
                 <li><a asp-page="/Images/Manage" title="Add a Post"><i class="fa fa-plus pad-right-xs"></i></a></li>
-                <li><a href="https://github.com/mikefili/LAB15-Insta.NET" title="Visit GitHub Repo" target="_blank"><i class="fa fa-github"></i></a></li>
+                <li><a href="https://github.com/mikefili/LAB15-Insta.NET" title="Visit GitHub Repo" target="_blank"><i class="fab fa-github"></i></a></li>
             </ul>
         </nav>
     </header>
