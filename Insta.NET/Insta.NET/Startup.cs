@@ -28,7 +28,7 @@ namespace InstaDOTNET
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddDbContext<InstaDOTNETDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<InstaDOTNETDbContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
 
             services.AddScoped<IImage, ImageManager>();
             //services.AddScoped<IComment, CommentManager>();
