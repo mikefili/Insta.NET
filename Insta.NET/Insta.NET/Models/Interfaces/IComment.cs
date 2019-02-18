@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace InstaDOTNET.Models.Interfaces
 {
-    interface IComment
+    public interface IComment
     {
         // Find
         //Task<Comment> FindCommentAsync(int id);

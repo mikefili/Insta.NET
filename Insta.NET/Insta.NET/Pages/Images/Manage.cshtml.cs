@@ -50,7 +50,6 @@ namespace InstaDOTNET.Pages.Images
             img.Name = Image.Name;
             img.Author = Image.Author;
             img.Caption = Image.Caption;
-            img.URL = Image.URL;
 
             if (ImageFile != null)
             {

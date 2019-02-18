@@ -3,8 +3,6 @@
 @inject IImage ImageManager
 @{ 
     Layout = "_Layout";
-}
-@{
     var images = await ImageManager.GetImagesAsync();
 }
 @*<div class="center pad-top-m pad-bottom-m">
@@ -15,7 +13,7 @@
     {
         <div class="pad-bottom-m pad-top-s pad-left-s pad-right-s frame">
             <div class="polaroid hover-shadow pad-bottom-s ">
-                <img src="@image.URL" class="thin-border" />
+                <img src="@image.URL" class="picture-frame" />
                 <div class="flex-row-container space-between auto-align">
                     <table>
                         <tbody>
@@ -27,7 +25,7 @@
                     </table>
                     <div>
                         <a asp-page="/Images/Index" asp-route-id="@image.ID" class="text-red a" title="View Details/Edit"><i class="far fa-image"></i></a>
-                        <a title="Comment" class="a"><i class="a far fa-comment"></i></a>
+                        <a asp-page="/Images/Comments" asp-route-id="@image.ID" title="Comment" class="a"><i class="a far fa-comment"></i></a>
                     </div>
                 </div>
                 <div class="caption text-caption pad-top-xs scrollable">"@image.Caption"</div>

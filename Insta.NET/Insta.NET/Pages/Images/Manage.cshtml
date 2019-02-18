@@ -8,13 +8,13 @@
     <div class="flex-column-container">
         <div class="polaroid single-polaroid center pad-top-s thin-border">
             <form method="post" enctype="multipart/form-data">
-                <img src="@Model.Image.URL" onerror="https://via.placeholder.com/200" class="thin-border" />
+                <img src="@Model.Image.URL" onerror="https://via.placeholder.com/200" class="picture-frame" />
                 <div class="pad-top-xs">
                     <table class="text-s">
                         <tbody class="align-left">
                             <tr>
-                                <td><label asp-for="Image"></label></td>
-                                <td><input asp-for="Image" type="file" /></td>
+                                <td><label asp-for="ImageFile"></label></td>
+                                <td><input asp-for="ImageFile" type="file" /></td>
                             </tr>
                             <tr>
                                 <td class="pad-bottom-xs pad-right-s bold"><label asp-for="Image.Name"></label></td>
@@ -23,10 +23,6 @@
                             <tr>
                                 <td class="pad-bottom-xs pad-right-s bold"><label asp-for="Image.Author"></label></td>
                                 <td><input asp-for="Image.Author" /></td>
-                            </tr>
-                            <tr>
-                                <td class="pad-bottom-xs pad-right-s bold"><label asp-for="Image.URL"></label></td>
-                                <td><input asp-for="Image.URL" /></td>
                             </tr>
                             <tr>
                                 <td class="pad-bottom-xs pad-right-s bold"><label asp-for="Image.Caption"></label></td>

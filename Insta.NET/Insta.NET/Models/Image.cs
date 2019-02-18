@@ -22,7 +22,6 @@ namespace InstaDOTNET.Models
         [Display(Name = "Caption")]
         public string Caption { get; set; }
 
-        [Required(ErrorMessage = "Please provide a URL for the image")]
         [Display(Name = "Image Link")]
         public string URL { get; set; }
     }

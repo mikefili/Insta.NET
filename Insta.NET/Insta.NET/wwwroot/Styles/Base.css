@@ -27,12 +27,19 @@ nav {
 
 main {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     flex-basis: 25%;
     min-height: 800px;
+}
+
+.pseudo-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 25%;
 }
 
 header {
@@ -245,8 +252,51 @@ i:hover {
     min-height: 200px;
 }
 
+.picture-frame {
+    border: 1px solid #999;
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+}
+
 .caption {
     max-width: 200px;
+}
+
+.post-it {
+    width: 20vw;
+    min-width: 200px;
+    max-width: 500px;
+    height: 20vw;
+    min-height: 200px;
+    max-height: 500px;
+    background-color: #FFFFA5;
+    border: 1px solid #cccc84;
+    /*transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);*/
+}
+
+.post-it-input {
+    background-color: #FFFFA5;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #cccc84;
+}
+
+.post-it-TA {
+    background-color: #FFFFA5;
+    outline: none;
+    border: none;
+    width: 90%;
+}
+
+.post-it-TA:hover {
+    cursor: text;
 }
 
 @media (max-width: 560px) {
@@ -263,8 +313,12 @@ i:hover {
     }
 
     main {
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: space-between;
+    }
+
+    .pseudo-main {
+        flex-direction: column;
     }
 
     header {

@@ -1,0 +1,43 @@
+﻿@page "{id}"
+@model InstaDOTNET.Pages.Images.CommentsModel
+@using InstaDOTNET.Models.Interfaces
+@inject IComment CommentManager
+@{
+    ViewData["Title"] = "Comments";
+    Layout = "_Layout";
+    var comments = CommentManager.GetCommentsAsync();
+}
+<div class="single-post center">
+    <div class="pad-top-s pad-bottom-m">
+        <form method="post">
+            <div class="flex-row-container space-between">
+                <div class="post-it hover-shadow center">
+                    <div class="flex-column-container pad-bottom-xs">
+                        <label asp-for="Comment.CommentString" class="text-s">Comment here: </label>
+                        <textarea rows="7" asp-for="Comment.CommentString" class="post-it-TA text-caption"></textarea>
+                    </div>
+                    <div class="center">
+                        <label asp-for="Comment.CommentAuthor" class="bold text-s">By: </label>
+                        <input asp-for="Comment.CommentAuthor" class="post-it-input" />
+                    </div>
+                </div>
+            </div>
+            <div class="pad-bottom-s"></div>
+            <button type="submit" class="button">Add Comment</button>
+            <button type=""
+        </form>
+    </div>
+</div>
+<div class="pseudo-main">
+    @foreach (var comment in await comments)
+    {
+    <div class="pad-bottom-s center">
+        <div class="post-it hover-shadow">
+            <div class="pad-top-s pad-left-s pad-right-s pad-bottom-s">
+                <div class="text-s text-caption">@comment.CommentString</div>
+            </div>
+            <div class="text-s pad-left-s"><span class="bold">By:</span> <span class="text-caption text-red">@comment.CommentAuthor</span></div>
+        </div>
+    </div>
+    }
+</div>
