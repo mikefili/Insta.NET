@@ -63,6 +63,10 @@
     justify-content: space-between;
 }
 
+.flex-center {
+    justify-content: center;
+}
+
 .pad-top-xs {
     padding-top: 1vw;
 }

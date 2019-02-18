@@ -27,12 +27,19 @@ nav {
 
 main {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     flex-basis: 25%;
     min-height: 800px;
+}
+
+.pseudo-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 25%;
 }
 
 header {
@@ -245,6 +252,14 @@ i:hover {
     min-height: 200px;
 }
 
+.picture-frame {
+    border: 1px solid #999;
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+}
+
 .caption {
     max-width: 200px;
 }
@@ -298,8 +313,12 @@ i:hover {
     }
 
     main {
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: space-between;
+    }
+
+    .pseudo-main {
+        flex-direction: column;
     }
 
     header {
