@@ -33,3 +33,8 @@ Users have the ability to **Comment** on posts
 ![Comment Page](/Assets/comment_landing_page.PNG)
 
 ![Comment Page - Comment Added](/Assets/comment_added_page.PNG)
+
+## Tech Used
+- Azure App Service, Blob Storage, and SQL Database
+- Microsoft ASP.NET Core and Entity Framework
+- Razor Pages
