@@ -14,6 +14,30 @@ namespace UnitTests_InstaDOTNET
         // IMAGE UNIT TESTS
 
         [Fact]
+        public async void CanDeleteImageAsync()
+        {
+            DbContextOptions<InstaDOTNETDbContext> options = new DbContextOptionsBuilder<InstaDOTNETDbContext>().UseInMemoryDatabase("DeleteAsync").Options;
+
+            using (InstaDOTNETDbContext context = new InstaDOTNETDbContext(options))
+            {
+                Image image = new Image();
+                image.ID = 1;
+                image.Name = "Test Image";
+                image.Author = "Test Author";
+                image.Caption = "Test Caption";
+                image.URL = "www.testURL.com/test-image.png";
+
+                ImageManager imageManager = new ImageManager(context);
+                await imageManager.SaveAsync(image);
+                await imageManager.DeleteAsync(image.ID);
+
+                Image result = await context.Images.FirstOrDefaultAsync(i => i.ID == image.ID);
+
+                Assert.Null(result);
+            }
+        }
+
+        [Fact]
         public async void CanFindImageAsync()
         {
             DbContextOptions<InstaDOTNETDbContext> options = new DbContextOptionsBuilder<InstaDOTNETDbContext>().UseInMemoryDatabase("FindImageAsync").Options;
