@@ -38,3 +38,6 @@ Users have the ability to **Comment** on posts
 - Azure App Service, Blob Storage, and SQL Database
 - Microsoft ASP.NET Core and Entity Framework
 - Razor Pages
+
+## Architectural Design
+![DB Schema](/Assets/insta_schema.PNG)
