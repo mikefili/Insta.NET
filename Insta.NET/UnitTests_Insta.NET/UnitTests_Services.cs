@@ -116,5 +116,61 @@ namespace UnitTests_InstaDOTNET
                 Assert.Equal(image, result);
             }
         }
+
+        // COMMENT UNIT TESTS
+
+        [Fact]
+        public async void CanGetAllCommentsAsync()
+        {
+            DbContextOptions<InstaDOTNETDbContext> options = new DbContextOptionsBuilder<InstaDOTNETDbContext>().UseInMemoryDatabase("GetCommentsAsync").Options;
+
+            using (InstaDOTNETDbContext context = new InstaDOTNETDbContext(options))
+            {
+                Comment comment = new Comment();
+                comment.ID = 1;
+                comment.ImageID = 1;
+                comment.CommentString = "Test Comment";
+                comment.CommentAuthor = "Test Author";
+
+                Comment comment2 = new Comment();
+                comment2.ID = 2;
+                comment2.ImageID = 1;
+                comment2.CommentString = "Test Comment 2";
+                comment2.CommentAuthor = "Test Author 2";
+
+                CommentManager commentManager = new CommentManager(context);
+                await commentManager.SaveAsync(comment);
+                await commentManager.SaveAsync(comment2);
+                List<Comment> comments = new List<Comment>();
+                comments.Add(comment);
+                comments.Add(comment2);
+
+                List<Comment> result = await commentManager.GetCommentsAsync();
+
+                Assert.Equal(comments, result);
+            }
+        }
+
+        [Fact]
+        public async void CanSaveCommentAsync()
+        {
+            DbContextOptions<InstaDOTNETDbContext> options = new DbContextOptionsBuilder<InstaDOTNETDbContext>().UseInMemoryDatabase("SaveAsync").Options;
+
+            using (InstaDOTNETDbContext context = new InstaDOTNETDbContext(options))
+            {
+                Comment comment = new Comment();
+                comment.ID = 1;
+                comment.ImageID = 1;
+                comment.CommentString = "Test Comment";
+                comment.CommentAuthor = "Test Author";
+
+                CommentManager commentManager = new CommentManager(context);
+                await commentManager.SaveAsync(comment);
+
+                Comment result = await context.Comments.FirstOrDefaultAsync(c => c.ID == comment.ID);
+
+                Assert.Equal(comment, result);
+            }
+        }
     }
 }
