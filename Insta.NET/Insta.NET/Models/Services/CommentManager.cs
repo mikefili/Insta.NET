@@ -23,18 +23,6 @@ namespace InstaDOTNET.Models.Services
         }
 
         /// <summary>
-        /// Delete a comment asynchronously
-        /// </summary>
-        /// <param name="id">ID of comment to be deleted</param>
-        /// <returns>Task</returns>
-        public async Task DeleteAsync(int id)
-        {
-            Comment comment = _context.Comments.FirstOrDefault(c => c.ID == id);
-            _context.Comments.Remove(comment);
-            await _context.SaveChangesAsync();
-        }
-
-        /// <summary>
         /// Get a list of comments asynchronously
         /// </summary>
         /// <returns>List of comments</returns>

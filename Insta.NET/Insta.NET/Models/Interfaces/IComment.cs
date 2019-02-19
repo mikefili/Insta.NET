@@ -15,8 +15,5 @@ namespace InstaDOTNET.Models.Interfaces
 
         // Save
         Task SaveAsync(Comment comment);
-
-        // Delete
-        Task DeleteAsync(int id);
     }
 }
