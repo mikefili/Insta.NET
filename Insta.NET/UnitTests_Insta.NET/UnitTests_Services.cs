@@ -11,9 +11,33 @@ namespace UnitTests_InstaDOTNET
 {
     public class UnitTests_Services
     {
-        // IMAGES
+        // IMAGE UNIT TESTS
+
         [Fact]
-        public async void CanGetAllImages()
+        public async void CanFindImageAsync()
+        {
+            DbContextOptions<InstaDOTNETDbContext> options = new DbContextOptionsBuilder<InstaDOTNETDbContext>().UseInMemoryDatabase("FindImageAsync").Options;
+
+            using (InstaDOTNETDbContext context = new InstaDOTNETDbContext(options))
+            {
+                Image image = new Image();
+                image.ID = 1;
+                image.Name = "Test Image";
+                image.Author = "Test Author";
+                image.Caption = "Test Caption";
+                image.URL = "www.testURL.com/test-image.png";
+
+                ImageManager imageManager = new ImageManager(context);
+                await imageManager.SaveAsync(image);
+
+                Image result = await imageManager.FindImageAsync(image.ID);
+
+                Assert.Equal(image, result);
+            }
+        }
+
+        [Fact]
+        public async void CanGetAllImagesAsync()
         {
             DbContextOptions<InstaDOTNETDbContext> options = new DbContextOptionsBuilder<InstaDOTNETDbContext>().UseInMemoryDatabase("GetImagesAsync").Options;
 
@@ -47,7 +71,7 @@ namespace UnitTests_InstaDOTNET
         }
 
         [Fact]
-        public async void CanSaveImage()
+        public async void CanSaveImageAsync()
         {
             DbContextOptions<InstaDOTNETDbContext> options = new DbContextOptionsBuilder<InstaDOTNETDbContext>().UseInMemoryDatabase("SaveAsync").Options;
 
