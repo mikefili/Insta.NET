@@ -17,9 +17,16 @@ The **Landing Page** for each post shows all the details of the post
 ### Add Image Page
 Users can **Add** their own content
  
- ![Add Image Page](/Assets/insta_new_image_page.PNG)
+![Add Image Page](/Assets/insta_new_image_page.PNG)
  
 ### Edit/Delete Page
 **Delete** posts, and **Edit** the details of posts as well
  
-  ![Edit/Delete Page](/Assets/insta_edit_page.PNG)
+![Edit/Delete Page](/Assets/insta_edit_page.PNG)
+
+### Comment Page
+Users have the ability to **Comment** on posts
+
+![Comment Page](/Assets/comment_landing_page.PNG)
+
+![Comment Page - Comment Added](/Assets/comment_added_page.PNG)
