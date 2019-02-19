@@ -1,4 +1,4 @@
-# Insta.NET
+# `<center>Insta.NET</center>`
 
 ## Description
 Insta.NET is a Razor Pages web application that holds posts of images and their details.
