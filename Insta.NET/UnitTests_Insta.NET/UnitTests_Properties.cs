@@ -5,7 +5,7 @@ using InstaDOTNET.Models;
 
 namespace UnitTests_Insta.NET
 {
-    public class ImageUnitTests
+    public class UnitTests_Properties
     {
         [Fact]
         public void CanGetImageName()
