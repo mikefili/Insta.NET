@@ -1,5 +1,8 @@
 <h1 align="center">Insta.NET</h1>
 
+## Azure Deploy URL
+https://instadotnet.azurewebsites.net/
+
 ## Description
 Insta.NET is a Razor Pages web application that allows users to upload and post images from their mobile phone or computer. You can explore all uploaded images, view and edit posts, and even leave comments on images. 
 
