@@ -10,7 +10,7 @@ The <span style="color:red">Home Page</span> displays all created posts in the A
 ![Home Page](/Assets/insta_landing_page.PNG)
 
 ### Landing Page
-The <font color="#2553f3"><b>Landing Page</b></font> for each post shows all the details of the post
+The <font color="red">Landing Page</font> for each post shows all the details of the post
 
 ![Landing Page](/Assets/insta_details_page.PNG)
 
