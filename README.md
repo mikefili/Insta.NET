@@ -5,7 +5,7 @@ Insta.NET is a Razor Pages web application that allows users to upload and post 
 
 ## How to Use
 The **Home Page** displays all created posts in the Azure database
-![Home Page](/Assets/insta_landing_page.png)
+![Home Page](Assets/insta_landing_page.png)
 
 The **Landing Page** for each post shows all the details of the post
 ![Landing Page](/Assets/insta_details_page.png)
