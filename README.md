@@ -1,7 +1,7 @@
 <h1 align="center">Insta.NET</h1>
 
 ## Description
-Insta.NET is a Razor Pages web application that holds posts of images and their details.
+Insta.NET is a Razor Pages web application that allows users to upload and post images, view and edit posts, and even leave comments on images. 
 
 ## Features
  - A **Home Page** which displays all created posts
