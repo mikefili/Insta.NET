@@ -11,18 +11,27 @@ namespace InstaDOTNET.Pages.Images
 {
     public class IndexModel : PageModel
     {
+        // Properties
         private readonly IImage _image;
-
-        public IndexModel(IImage image)
-        {
-            _image = image;
-        }
 
         [FromRoute]
         public int ID { get; set; }
 
         public Image Image { get; set; }
 
+        /// <summary>
+        /// Image dependency injection
+        /// </summary>
+        /// <param name="image">Image "context"</param>
+        public IndexModel(IImage image)
+        {
+            _image = image;
+        }
+
+        /// <summary>
+        /// Get an image by ID
+        /// </summary>
+        /// <returns>Image</returns>
         public async Task OnGetAsync()
         {
             Image = await _image.FindImageAsync(ID);

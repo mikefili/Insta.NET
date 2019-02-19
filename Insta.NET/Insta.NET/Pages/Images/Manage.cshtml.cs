@@ -16,6 +16,7 @@ namespace InstaDOTNET.Pages.Images
 {
     public class ManageModel : PageModel
     {
+        // Properties
         private readonly IImage _image;
 
         [FromRoute]
@@ -29,6 +30,11 @@ namespace InstaDOTNET.Pages.Images
 
         public Blob BlobImage { get; set; }
 
+        /// <summary>
+        /// Blob & Image Dependency injection
+        /// </summary>
+        /// <param name="image">Image "context"</param>
+        /// <param name="configuration">Blob configuration</param>
         public ManageModel (IImage image, IConfiguration configuration)
         {
             _image = image;
@@ -36,11 +42,19 @@ namespace InstaDOTNET.Pages.Images
             BlobImage = new Blob(configuration);
         }
 
+        /// <summary>
+        /// Get an image by ID or create a new one if none exists
+        /// </summary>
+        /// <returns>Image</returns>
         public async Task OnGetAsync()
         {
             Image = await _image.FindImageAsync(ID.GetValueOrDefault()) ?? new Image();
         }
 
+        /// <summary>
+        /// Post user input to new image & stream image to blob
+        /// </summary>
+        /// <returns>Redirect to Index page</returns>
         public async Task<IActionResult> OnPostAsync()
         {
             // make call to db w/ ID or create new if ID does not exist
@@ -79,6 +93,10 @@ namespace InstaDOTNET.Pages.Images
             return RedirectToPage("/Index", new { id = img.ID });
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public async Task<IActionResult> OnPostDeleteAsync()
         {
             await _image.DeleteAsync(ID.Value);

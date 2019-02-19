@@ -11,12 +11,8 @@ namespace InstaDOTNET.Pages.Images
 {
     public class CommentsModel : PageModel
     {
+        // Properties
         private readonly IComment _comment;
-
-        public CommentsModel(IComment comment)
-        {
-            _comment = comment;
-        }
 
         [FromRoute]
         public int ID { get; set; }
@@ -24,11 +20,27 @@ namespace InstaDOTNET.Pages.Images
         [BindProperty]
         public Comment Comment { get; set; }
 
+        /// <summary>
+        /// Comment dependency injection
+        /// </summary>
+        /// <param name="comment">Comment "context"</param>
+        public CommentsModel(IComment comment)
+        {
+            _comment = comment;
+        }
+
+        /// <summary>
+        /// Create new comment
+        /// </summary>
         public void OnGet()
         {
             Comment = new Comment();
         }
 
+        /// <summary>
+        /// Post user input to new comment
+        /// </summary>
+        /// <returns>Redirect to Image Index page</returns>
         public async Task<IActionResult> OnPostAsync()
         {
             // create new comment
